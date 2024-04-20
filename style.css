@@ -1,0 +1,126 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p, li, ul {
+    color: #797979;
+    margin: 2%;
+    font-weight: bold;
+}
+
+/* Styles bande en haut avec le nom */
+header {
+    background-color: #dccbf8;
+    padding: 20px;
+    position: fixed; /* Position fixe pour rester en haut de l'écran */
+    top: 0;
+    width: calc(100% - 5%);
+    margin-left: 5%; /* Décalage sur le côté pour laisser de l'espace pour la barre latérale */
+    
+}
+
+.header-content {
+    max-width: 960px;
+    text-align: center; 
+}
+
+h1 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Styles pour la bande latérale */
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5%; /* Largeur initiale de la bande latérale */
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+    transition: width 0.5s; 
+    z-index: 1000; 
+}
+
+/* Styles pour la version repliée de la bande latérale */
+.collapsed-side-content {
+    padding: 10%;
+    text-align: center;
+}
+
+.collapsed-side-content img {
+    border-radius: 50%;
+    width: 55px;
+    margin-bottom: 80%;
+    /* margin: 0 auto; */
+}
+
+.contact-icons img {
+    width: 40px;
+    margin-bottom: 80%;
+}
+
+/* Styles pour la version déroulée de la bande latérale */
+.expanded-side-content {
+    display: none; /* Masquer par défaut en version dépliée */
+}
+
+.expanded-side-content img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    width: 150px;
+}
+
+.contact-info p {
+    margin: 50px;
+}
+
+
+main {
+    margin-left: 4%; /* décalage car bande latérale */
+    padding: 20px;
+    padding-top: 100px;
+}
+
+main p, li {
+    margin-left: 8%;
+}
+
+.block {
+    border: 2px solid #dccbf8;
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+
+section {
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #4e4e4e;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 2%;
+}
+
+/* Animation de la bande latérale au survol de la souris */
+aside:hover {
+    width: 20%; 
+}
+
+aside:hover .collapsed-side-content {
+    display: none; /* pour masquer le contenu replié */
+}
+
+aside:hover .expanded-side-content {
+    display: block; /* pour afficher le contenu déplié */
+}
